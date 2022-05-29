@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    float speed;                //  How fast the camera can move back and forward across the map
-    float zoomSpeed;            //  How fast the camera can scroll up and down
-    float rotateSpeed;          //  How fast the camera can spin around on it's axis
+    /// <summary>
+    /// How fast the camera can move back and forward across the map
+    /// </summary>
+    float speed = 0.06f;
+
+    /// <summary>
+    /// How fast the camera can scroll up and down
+    /// </summary>
+    float zoomSpeed = 10.0;
+
+    /// <summary>
+    /// How fast the camera can spin around on it's axis
+    /// </summary>
+    float rotateSpeed = 0;
 
     float maxHeight = 40f;      //  How high camera can go 
     float minHeight = 4f;       //  How low camera can go
@@ -26,5 +37,14 @@ public class CameraMovement : MonoBehaviour
 
 
         Vector3 verticalMove = new Vector3(0, scrollSp, 0);
+        Vector3 lateralMove = hsp * transform.right;
+        Vector3 forwardMove = transform.forward;
+        forwardMove.y = 0;
+        forwardMove.Normalize();
+        forwardMove *= vsp;
+
+        Vector3 move = verticalMove + lateralMove + forwardMove;
+
+        transform.position += move;
     }
 }
