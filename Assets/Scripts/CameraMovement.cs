@@ -41,6 +41,18 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Trying to implement fast mode
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 0.06f;
+            zoomSpeed = 20.0f;
+        }
+        else
+        {
+            speed = 0.035f;
+            zoomSpeed = 10.0f;
+        }
+
         float hsp = speed * Input.GetAxis("Horizontal");                        // Horizontal movement speed variable
         float vsp = speed * Input.GetAxis("Vertical");                          // Vertical movement speed variable
         float scrollSp = -zoomSpeed * Input.GetAxis("Mouse Scrollwheel");       // Scrollwheel movement speed variable
