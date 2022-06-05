@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class that controls how the move the camera in game
+/// </summary>
 public class CameraMovement : MonoBehaviour
 {
     /// <summary>
@@ -19,8 +22,15 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     float rotateSpeed = 0.0f;
 
-    float maxHeight = 40.0f;      //  How high camera can go 
-    float minHeight = 4.0f;       //  How low camera can go
+    /// <summary>
+    /// Controls how high camera can go
+    /// </summary>
+    float maxHeight = 40.0f;
+
+    /// <summary>
+    /// Controls how low camera can go
+    /// </summary>
+    float minHeight = 4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,20 +41,21 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float hsp = speed * Input.GetAxis("Horizontal");
-        float vsp = speed * Input.GetAxis("Vertical");
-        float scrollSp = -zoomSpeed * Input.GetAxis("Mouse Scrollwheel");
+        float hsp = speed * Input.GetAxis("Horizontal");                        // Horizontal movement speed variable
+        float vsp = speed * Input.GetAxis("Vertical");                          // Vertical movement speed variable
+        float scrollSp = -zoomSpeed * Input.GetAxis("Mouse Scrollwheel");       // Scrollwheel movement speed variable
 
-
+        //  Vectors for moving in each direction
         Vector3 verticalMove = new Vector3(0, scrollSp, 0);
         Vector3 lateralMove = hsp * transform.right;
         Vector3 forwardMove = transform.forward;
-        forwardMove.y = 0.0f;
+
+        forwardMove.y = 0.0f;                                                   // We don't want to move down
         forwardMove.Normalize();
         forwardMove *= vsp;
 
-        Vector3 move = verticalMove + lateralMove + forwardMove;
+        Vector3 move = verticalMove + lateralMove + forwardMove;                // Add all vectors all together to one move vector
 
-        transform.position += move;
+        transform.position += move;                                             // Add this one vector to our position
     }
 }
