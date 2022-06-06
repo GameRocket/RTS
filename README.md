@@ -1,6 +1,9 @@
 # RTS
 RTS - real-time strategy project.
 
+## More about
+Creating a sample project with all configs and staff for typical real-time strategy project.
+
 ## Specifications
 
 *06/01/2022*
