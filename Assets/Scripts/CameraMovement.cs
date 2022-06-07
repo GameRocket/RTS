@@ -53,21 +53,51 @@ public class CameraMovement : MonoBehaviour
             zoomSpeed = 10.0f;
         }
 
-        float hsp = speed * Input.GetAxis("Horizontal");                        // Horizontal movement speed variable
-        float vsp = speed * Input.GetAxis("Vertical");                          // Vertical movement speed variable
-        float scrollSp = -zoomSpeed * Input.GetAxis("Mouse Scrollwheel");       // Scrollwheel movement speed variable
+        //  Horizontal movement speed variable
+        float hsp = transform.position.y * speed * Input.GetAxis("Horizontal");
+
+        //  Vertical movement speed variable
+        float vsp = transform.position.y * speed * Input.GetAxis("Vertical");
+
+        //  ScrollWheel movement speed variable
+        float scrollSp = Math.Log(transform.position.y) * -zoomSpeed * Input.GetAxis("Mouse ScrollWheel");
+
+        //  To check if we are above our maximum height
+        if ((transform.position.y >= maxHeight) && (scrollSp > 0))
+        {
+            scrollSp = 0;
+        }
+        //  To check if we are below our minimum height
+        else if ((transform.position.y <= minHeight) && (scrollSp < 0))
+        {
+            scrollSp = 0;
+        }
+
+        //  To check if our current position and scrollspeed is greater than maximum height
+        if ((transform.position.y + scrollSp) > maxHeight)
+        {
+            scrollSp = maxHeight - transform.position.y;
+        }
+        //  To check if our current position and scrollspeed is lower than minimum height
+        else if((transform.position.y + scrollSp) < minHeight)
+        {
+            scrollSp = minHeight - transform.position.y;
+        }
 
         //  Vectors for moving in each direction
         Vector3 verticalMove = new Vector3(0, scrollSp, 0);
         Vector3 lateralMove = hsp * transform.right;
         Vector3 forwardMove = transform.forward;
 
-        forwardMove.y = 0.0f;                                                   // We don't want to move down
+        //  We don't want to move down
+        forwardMove.y = 0.0f;
         forwardMove.Normalize();
         forwardMove *= vsp;
 
-        Vector3 move = verticalMove + lateralMove + forwardMove;                // Add all vectors all together to one move vector
+        //  Add all vectors all together to one move vector
+        Vector3 move = verticalMove + lateralMove + forwardMove;
 
-        transform.position += move;                                             // Add this one vector to our position
+        //  Add this one vector to our position
+        transform.position += move;
     }
 }
