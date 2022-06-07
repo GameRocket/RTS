@@ -32,6 +32,9 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     float minHeight = 4.0f;
 
+    Vector2 p1;
+    Vector2 p2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,5 +102,33 @@ public class CameraMovement : MonoBehaviour
 
         //  Add this one vector to our position
         transform.position += move;
+    }
+
+    /// <summary>
+    /// Function that takes arguments and returns void
+    /// </summary>
+    void getCameraRotation()
+    {
+        //  Check if the middle mouse button is pressed
+        if (Input.GetMouseButtonDown(2))
+        {
+            p1 = Input.mousePosition;
+        }
+
+        //  Check if the middle mouse button is being held down
+        if (Input.GetMouseButtonDown(2))
+        {
+            p2 = Input.mousePosition;
+
+            float dx = (p2 - p1).x * rotateSpeed;
+            float dy = (p2 - p1).y * rotateSpeed;
+
+            //  Y rotation
+            transform.rotation *= Quaternion.Euler(new Vector3(0, dx, 0));
+            transform.GetChild(0).transform.rotation *= Quaternion.Euler(new Vector3(-dy, 0, 0));
+
+            p1 = p2;
+        }
+
     }
 }
