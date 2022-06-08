@@ -63,7 +63,7 @@ public class CameraMovement : MonoBehaviour
         float vsp = transform.position.y * speed * Input.GetAxis("Vertical");
 
         //  ScrollWheel movement speed variable
-        float scrollSp = Math.Log(transform.position.y) * -zoomSpeed * Input.GetAxis("Mouse ScrollWheel");
+        float scrollSp = Mathf.Log(transform.position.y) * -zoomSpeed * Input.GetAxis("Mouse ScrollWheel");
 
         //  To check if we are above our maximum height
         if ((transform.position.y >= maxHeight) && (scrollSp > 0))
