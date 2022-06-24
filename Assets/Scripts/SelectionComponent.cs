@@ -45,13 +45,13 @@ public class SelectionComponent : MonoBehaviour
     public static void DrawScreenRectBorder(Rect rect, float thickness, Color color)
     {
         //  Top
-        Utils.DrawScreenRect(new Rect(rect.xMin, rect.yMin, rect.width, thickness), color);
+        SelectionComponent.DrawScreenRect(new Rect(rect.xMin, rect.yMin, rect.width, thickness), color);
         //  Left
-        Utils.DrawScreenRect(new Rect(rect.xMin, rect.yMin, thickness, rect.height), color);
+        SelectionComponent.DrawScreenRect(new Rect(rect.xMin, rect.yMin, thickness, rect.height), color);
         //  Right
-        Utils.DrawScreenRect(new Rect(rect.xMax - thickness, rect.yMin, thickness, rect.height), color);
+        SelectionComponent.DrawScreenRect(new Rect(rect.xMax - thickness, rect.yMin, thickness, rect.height), color);
         //  Bottom
-        Utils.DrawScreenRect(new Rect(rect.xMin, rect.yMax - thickness, rect.width, thickness), color);
+        SelectionComponent.DrawScreenRect(new Rect(rect.xMin, rect.yMax - thickness, rect.width, thickness), color);
     }
 
     /// <summary>
