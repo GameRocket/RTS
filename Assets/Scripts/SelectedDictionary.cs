@@ -30,7 +30,7 @@ public class SelectedDictionary : MonoBehaviour
         {
             if(pair.Value != null)
             {
-                Destroy(selectedTable[pair.Key].GetComponent<selection_component>);
+                Destroy(selectedTable[pair.Key].GetComponent<SelectedDictionary>());
             }
         }
         selectedTable.Clear();
