@@ -1,5 +1,5 @@
 # RTS
-RTS - real-time strategy project.
+RTS - real-time strategy project. Prepared settings for controlling the camera, objects and game units have been created.
 
 ## More about
 Creating a sample project with all configs and staff for typical real-time strategy project.
