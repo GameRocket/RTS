@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SelectionGlobal : MonoBehaviour
 {
-    id_dictionary id_table;
-    selected_dictionary selected_table;
+    SelectedDictionary selected_table;
     RaycastHit hit;
 
     bool dragSelect;
