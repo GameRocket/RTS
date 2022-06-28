@@ -1,8 +1,8 @@
 # RTS
-RTS - real-time strategy project. Prepared settings for controlling the camera, objects and game units have been created.
+**RTS** - real-time strategy sample game project. Here are all the necessary scripts and prepared settings for controlling the camera, selecting and destroying objects, units movements, building placement and much more.
 
 ## More about
-Creating a sample project with all configs and staff for typical real-time strategy project.
+Creating a sample project with all configs and staff for typical real-time strategy project. This project can be used as a starting point for creating a real-time strategy game. Some ideas and concepts for this were taken from the youtube channel "TheScreamingFedora".
 
 ## Development plan
 Below is a plan of what has already been done and what remains to be done.
@@ -13,11 +13,7 @@ Below is a plan of what has already been done and what remains to be done.
 * Create building placement script;
 * Create unit movement script;
 
-## Specifications
+## Unity version
 
 *06/01/2022*
-Move to Unity Editor version *2021.3.3f1*.
-
-## Links
-Some ideas and concepts for this were taken from the youtube channel "TheScreamingFedora".
-https://www.youtube.com/c/TheScreamingFedora
+Move project to Unity Editor version *2021.3.3f1*.
