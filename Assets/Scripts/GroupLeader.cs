@@ -24,6 +24,8 @@ public class GroupLeader : MonoBehaviour
             GameObject temp = Instantiate(child_prefab, transform.position + (relative_spawn * 6.0f), transform.rotation);
 
             //  Set the target to parent object to make childrens objects follow the parent object
+
+            ///  (!) NEED TO UNCOMMENT THIS LATER
             //temp.GetComponent<base_behavior>().target = gameObject;
 
             //  Adding new object
