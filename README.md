@@ -17,6 +17,7 @@ Below is a plan of what has already been done and what remains to be done.
 * Create script for destroyed object;
 * Create building placement script;
 * Create unit movement script;
+* Create bods script;
 
 ## :bookmark_tabs: License
 
