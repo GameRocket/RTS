@@ -129,6 +129,5 @@ public class CameraMovement : MonoBehaviour
 
             p1 = p2;
         }
-
     }
 }
