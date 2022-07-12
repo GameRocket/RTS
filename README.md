@@ -8,16 +8,20 @@ Creating a sample project with all configs and staff for typical real-time strat
 
   * Git
   * Unity (version 2021.3.3f1)
+  * TextMesh Pro for Unity Engine
 
 ## :date: Development plan
 Below is a plan of what has already been done and what remains to be done.
 * Create script for Camera Movement controls; - **Done** 
 * Create selection component script for units; - **Done** 
 * Create global selection script for all units; - **Done** 
-* Create script for destroyed object;
+* Create pathfinding groups movements; - **In progress**
+* Create script for destroyed object; - **In progress**
 * Create building placement script;
+* Create GUI canvas with buttons;
 * Create unit movement script;
-* Create bods script;
+* Create boids script;
+* Create sample menu;
 
 ## :bookmark_tabs: License
 
