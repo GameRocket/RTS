@@ -12,7 +12,7 @@ Creating a sample project with all configs and staff for typical real-time strat
 
 ## :date: Development plan
 Below is a plan of what has already been done and what remains to be done.
-* Create script for Camera Movement controls; - **Done** 
+* Create script for camera movement controls; - **Done** 
 * Create selection component script for units; - **Done** 
 * Create global selection script for all units; - **Done** 
 * Create pathfinding groups movements; - **In progress**
