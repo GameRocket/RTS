@@ -518,6 +518,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3201973016303825655, guid: 9d75dceaa880aeb498581ec5019bf6b5, type: 3}
   m_PrefabInstance: {fileID: 8650560946031901080}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1090965810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090965809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6865b3df07873744fa185ce07076dbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1090965809}
 --- !u!1 &1215658243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Add Building
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
