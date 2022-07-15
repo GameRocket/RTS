@@ -29,7 +29,7 @@ public class BluePrint : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         //  Than it hits terrain
-        if ( Physics.Raycast(ray, out hit, 50000.0f, (1 << 8)))
+        if ( Physics.Raycast(ray, out hit, 500000.0f, (1 << 6)))
         {
             //  We going to set our new blue print object position to be
             transform.position = hit.point;
