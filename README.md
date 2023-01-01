@@ -11,17 +11,15 @@ Creating a sample project with all configs and staff for typical real-time strat
   * TextMesh Pro for Unity Engine
 
 ## :date: Development plan
-Below is a plan of what has already been done and what remains to be done.
+
+Further development of the project is frozen. Feel free to pick up any code for your projects.
+
+Below is a list of features what was successfully implemented before the project was frozen:
 * Create script for camera movement controls; - **Done** 
 * Create selection component script for units; - **Done** 
 * Create global selection script for all units; - **Done** 
 * Create pathfinding groups movements; - **In progress**
 * Create script for destroyed object; - **In progress**
-* Create building placement script;
-* Create GUI canvas with buttons;
-* Create unit movement script;
-* Create boids script;
-* Create sample menu;
 
 ## :bookmark_tabs: License
 
